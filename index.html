@@ -1,30 +1,101 @@
 <html>
-    <head>
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link href="assets/css/style.css?v=3" rel="stylesheet"/>
-        <title>Microverse Exercise 1</title>
-    </head>
-    <body>
-        <div class="main">
-            <div class="wrap">
-                <!-- HEADER -->
-                <div class="header">
-                    <h1>Microverse Survey Form</h1>
-                    <div><i>Thank you for taking time to help us improve our platform</i></div>
-                </div>
-
-                <!-- FORM BODY -->
-                <div class="form_body">
-                    Form body
-                </div>
-            </div>
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="assets/css/style.css?v=3" rel="stylesheet"/>
+    <title>Microverse Exercise 1</title>
+</head>
+<body>
+<div class="main">
+    <div class="wrap">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>Microverse Survey Form</h1>
+            <div><i>Thank you for taking time to help us improve our platform</i></div>
         </div>
 
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        <!-- FORM BODY -->
+        <div class="form_body">
+            <form action="index.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                           required>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label for="age">Age (Optional)</label>
+                    <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age">
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label for="role-description">Which option best describes your current role?</label>
+                    <select id="role-description" class="form-control">
+                        <option value="">Select current role</option>
+                        <option value="1">Student</option>
+                        <option value="2">Full Time Job</option>
+                        <option value="3">Full Time Learner</option>
+                        <option value="4">Prefer Not To Say</option>
+                        <option value="5">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label id="recommend" class="form-check-label">Would you recommend freeCodeCamp to a friend?</label>
+                    <br/>
+
+                    <input type="radio" for="recommend" value="Definitely">Definitely<br>
+                    <input type="radio" for="recommend_2" value="Maybe">Maybe<br>
+                    <input type="radio" id="recommend_3" value="Not Sure">Not Sure<br>
+
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label for="favorite-feature">What is your favorite feature of freeCodeCamp?</label>
+                    <select id="favorite-feature" class="form-control">
+                        <option value="">Select an option</option>
+                        <option value="1">Challenges</option>
+                        <option value="2">Projects</option>
+                        <option value="3">Community</option>
+                        <option value="4">Open Source</option>
+                    </select>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label id="suggestion"> What would you like to see improved? (Check all that apply)
+                    </label>
+                    <br/>
+                    <input type="checkbox" for="suggestion" value=" Front-end Projects"> Front-end Projects<br>
+                    <input type="checkbox" for="suggestion" value="Back-end Projects">Back-end Projects<br>
+                    <input type="checkbox" for="suggestion" value="Data Visualization">Data Visualization<br>
+                    <input type="checkbox" for="suggestion" value="Challenges">Challenges<br>
+                    <input type="checkbox" for="suggestion" value="Open Source Community">Open Source Community<br>
+                    <input type="checkbox" for="suggestion" value="Gitter help rooms">Gitter help rooms<br>
+                    <input type="checkbox" for="suggestion" value="videos">Videos<br>
+                    <input type="checkbox" for="suggestion" value="City Meetups">City Meetups<br>
+                    <input type="checkbox" for="suggestion" value="Wiki">Wiki<br>
+                    <input type="checkbox" for="suggestion" value="Forum">Forum<br>
+                    <input type="checkbox" for="suggestion" value="Additional Courses">Additional Courses<br>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label for="comments">What is your favorite language?</label>
+                    <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+                </div>
+                <br/>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
             crossorigin="anonymous"></script>
-    </body>
+</body>
 </html>
